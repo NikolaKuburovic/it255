@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GET servis</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h2>Калкулатор потрошње горива и цене путовања</h2>
+<h3>GET сервис</h3>
+
+<form action="jsongetservis.php" method="GET">
+Унесите потрошњу горива на 100 км: <input type="number" name="potrosnja" min="2" max="40"/> <br/>
+Унесите дужину путовања у км: <input type="number" name="kilometraza" min="1"/> <br/>
+Изаберите врсту горива:
+<select name="gorivo">
+	<option value="benzin">Бензин</option>
+	<option value="dizel">Дизел</option>
+	<option value="autogas">Ауто гас</option>
+</select><br />
+<input type="submit" name="submit" value="Израчунај"/>
+</form>
+
+<h2>Конвертор валута</h2>
+<h3>POST сервис</h3>
+
+<form action="jsonpostservis.php" method="POST">
+Унесите износ: <input type="number" name="iznos" min="1"/>
+<select name="valutaPrva">
+	<option value="dinar">динари</option>
+	<option value="dolar">долари</option>
+	<option value="evro">евро</option>
+</select><br />
+У коју валуту да конвертујем унети износ
+<select name="valutaDruga">
+	<option value="dinar">динари</option>
+	<option value="dolar">долари</option>
+	<option value="evro">евро</option>
+</select><br />
+<input type="submit" name="submit" value="Израчунај"/>
+</form>
+
+
+</body>
+</html>
